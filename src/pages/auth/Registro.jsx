@@ -1,8 +1,13 @@
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Registro.css';
 
-
 const Registro = () => {
+  const navigate = useNavigate();
+
+  const handleLoginRedirect = () => {
+    navigate('/login'); // Redirige a la página de login
+  };
+
   return (
     <div className="registration-container">
       <div className="access-buttons">
@@ -15,8 +20,7 @@ const Registro = () => {
         <input type="tel" placeholder="Telefono" />
         <input type="email" placeholder="Correo" />
         <input type="password" placeholder="Contraseña" />
-        <button type="submit">Registrar</button>
-        <Link to="/register"></Link>
+        <button type="submit" onClick={handleLoginRedirect}>Registrar</button>
       </form>
     </div>
   );

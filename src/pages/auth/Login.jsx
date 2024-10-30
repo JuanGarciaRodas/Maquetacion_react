@@ -11,11 +11,15 @@ const Login = () => {
     navigate('/dashboard'); // Redirige a la página de dashboard
   };
 
+  const handleRegister = () => {
+    navigate('/registro'); // Redirige a la página de registro
+  };
+
   return (
     <div className="login-container">
       <div className="access-buttons">
-        <button className="login-button">Iniciar sesión</button>
-        <button className="register-button">Registrarse</button>
+        <button className="login-button" onClick={handleLogin}>Iniciar sesión</button>
+        <button className="register-button" onClick={handleRegister}>Registrarse</button>
       </div>
       <form className="login-form" onSubmit={handleLogin}>
         <input type="text" placeholder="Usuario" />
