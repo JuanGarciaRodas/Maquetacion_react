@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Registro.css';
 
 
@@ -15,6 +16,7 @@ const Registro = () => {
         <input type="email" placeholder="Correo" />
         <input type="password" placeholder="Contraseña" />
         <button type="submit">Registrar</button>
+        <Link to="/register"></Link>
       </form>
     </div>
   );
